@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.burger-menu {
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.burger-menu.open {
+  transform: rotate(180deg);
+}
+
+.red-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.gradient-button {
+  background: linear-gradient(45deg, red, white);
+}
+
+.gradient-text {
+  font-size: 1.8em;
+  font-weight: bold;
+  background: linear-gradient(45deg, red, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-text {
+  font-weight: bold;
+  background: linear-gradient(45deg, red, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#header {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.breaking-news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.carousel-wrapper {
+  max-width: 900px;
+  /* Adjust the maximum width as needed */
+  margin: 0 auto;
+}
+
+.legendContainer {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.legendTitle {
+  font-weight: bold;
+}
+
+.counter {
+  margin-top: 5px;
+}
+
+.carousel .carousel-status {
+  right: 0;
+  top: 0;
+  position: absolute;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+main {
+  background-image: url(../src/images/tokyo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  /* background-position: -800px 0;
+  background-size: 100% 100%; */
+}
+
+#newsList {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Media query for small screens */
+@media (max-width: 600px) {
+  .carousel-wrapper {
+    max-width: 90%;
+  }
+
+    main {
+      background-image: url(../src/images/tokyo.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;    
+      background-size: 100% 100%;
+    }
+
+    #sectionnews {
+      background-image: none;
+    }
+
+  #newsList {
+    margin-top: 3rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+     .news-image {
+       width: 100%;
+       height: 30%;
+     }
+}
+
+ .red-dot {
+   width: 12px;
+   height: 12px;
+   background-color: red;
+   border-radius: 50%;
+   display: inline-block;
+ }
+
+ .blink {
+   animation: blink 1s infinite;
+ }
+
+ @keyframes blink {
+   50% {
+     opacity: 0;
+   }
+ }
